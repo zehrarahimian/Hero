@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform transform;
     public float speed = 0.5f;
     public float rotationSpeed = 0.5f;
+    public ScoreManager ScoreValue;
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             Time.timeScale = 0;
         }
         if(collision.gameObject.tag == "Coin"){
+            ScoreValue.score +=5;
             Destroy(collision.gameObject);
         }
     }
