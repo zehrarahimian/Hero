@@ -44,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Enemy"){
             Time.timeScale = 0;
         }
+        if(collision.gameObject.tag == "Coin"){
+            Destroy(collision.gameObject);
+        }
     }
 }
  

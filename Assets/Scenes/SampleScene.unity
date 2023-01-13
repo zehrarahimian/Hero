@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386067363}
   - component: {fileID: 386067362}
+  - component: {fileID: 386067365}
   - component: {fileID: 386067364}
   m_Layer: 0
   m_Name: Spawner
@@ -158,6 +159,7 @@ MonoBehaviour:
   - {fileID: 1307894021578196576, guid: 02d82386d977841c5881300b5b95597a, type: 3}
   - {fileID: 3214335149762930719, guid: 6714f9465730841e494dffc10ba1d348, type: 3}
   - {fileID: 441435406793882414, guid: 0f081a3de5591476bb9e6ff4dc770814, type: 3}
+  - {fileID: 2740058077393527823, guid: d387e339bbe811048974bb59daa5e46a, type: 3}
 --- !u!4 &386067363
 Transform:
   m_ObjectHideFlags: 0
@@ -225,6 +227,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &386067365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386067361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbaffadfd99ea8488805995851c897f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +743,7 @@ GameObject:
   - component: {fileID: 1971249027}
   - component: {fileID: 1971249026}
   m_Layer: 0
-  m_Name: Plane1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,7 +789,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4299f7b178b783242b59b4772cc3cfe8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -848,7 +862,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0036835372, y: 0.025784716}
