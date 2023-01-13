@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movment();
-        
         Clamp();
     }
 
@@ -39,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -2.85f, 2.85f);
         transform.position = pos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.tag == "Enemy"){
+            //Time.timeScale = 0;
+        }
     }
 }
  

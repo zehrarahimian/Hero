@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform transform;
-    public float speed = 0.5f;
+    public float speed = 2f;
 
     void Start()
     {
@@ -15,5 +15,8 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0 , speed * Time.deltaTime , 0);
+        if(transform.position.y <= -10){
+            Destroy(gameObject);
+        }
     }
 }
