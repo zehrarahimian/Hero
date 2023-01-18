@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed = 0.5f;
     public ScoreManager ScoreValue;
 
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 5;
+
     void Start()
     {
         
@@ -17,10 +20,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movment();
+        Shooting();
         Clamp();
     }
 
-    void Movment(){
+    void Movment()
+    {
         if (Input.GetKey(KeyCode.RightArrow)){
             transform.position += new Vector3(speed * Time.deltaTime , 0 , 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, -50), rotationSpeed * Time.deltaTime);
@@ -35,7 +40,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Clamp(){
+    void Shooting()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)){
+             GameObject bullet = Instantiate(bulletPrefab);
+             bullet.transform.SetParent(transform.parent);
+             bullet.transform.position = transform.position;
+             bullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, bulletSpeed, transform.position.z);
+             Destroy(bullet, 5);
+        }
+    }
+
+    void Clamp()
+    {
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -2.85f, 2.85f);
         transform.position = pos;
