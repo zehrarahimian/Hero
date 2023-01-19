@@ -19,10 +19,6 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         scoreText.text = ("Score: " + score.ToString());
-        if (score > highScore)
-        {
-            highScore = score;
-        }
     }
 
     IEnumerator Score(){

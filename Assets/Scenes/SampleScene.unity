@@ -217,7 +217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Heart
+  m_Text: Coin
 --- !u!23 &245337972
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -304,7 +304,6 @@ MonoBehaviour:
   - {fileID: 1307894021578196576, guid: 02d82386d977841c5881300b5b95597a, type: 3}
   - {fileID: 3214335149762930719, guid: 6714f9465730841e494dffc10ba1d348, type: 3}
   - {fileID: 441435406793882414, guid: 0f081a3de5591476bb9e6ff4dc770814, type: 3}
-  - {fileID: 2740058077393527823, guid: d387e339bbe811048974bb59daa5e46a, type: 3}
 --- !u!4 &386067363
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +398,7 @@ GameObject:
   - component: {fileID: 395205474}
   - component: {fileID: 395205473}
   m_Layer: 5
-  m_Name: HighScore
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,7 +478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HighScore: '
+  m_Text: 'Time: '
 --- !u!23 &395205475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1277,6 +1276,7 @@ GameObject:
   - component: {fileID: 1971249025}
   - component: {fileID: 1971249024}
   - component: {fileID: 1971249028}
+  - component: {fileID: 1971249029}
   - component: {fileID: 1971249023}
   - component: {fileID: 1971249027}
   - component: {fileID: 1971249026}
@@ -1352,9 +1352,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transform: {fileID: 1971249025}
-  speed: 2
-  rotationSpeed: 0.5
+  speed: 3
+  rotationSpeed: 1
   ScoreValue: {fileID: 1971249028}
+  bulletPrefab: {fileID: 1860706049015914, guid: 0b0c27137eb4d504096874b80ace66bd, type: 3}
+  bulletSpeed: 5
 --- !u!4 &1971249025
 Transform:
   m_ObjectHideFlags: 0
@@ -1432,3 +1434,16 @@ MonoBehaviour:
   score: 0
   highScore: 0
   scoreText: {fileID: 1930785004}
+--- !u!114 &1971249029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971249022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29faffef44295f942a168ccad41c1c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 395205474}
