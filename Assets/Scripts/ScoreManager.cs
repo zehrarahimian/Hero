@@ -6,13 +6,11 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public int score =0;
-    public int highScore =0 ;
     public Text scoreText;
 
     void Start()
     {
         StartCoroutine(Score()); 
-        highScore = 0;
     }
 
 

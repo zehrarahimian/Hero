@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 5;
 
+    public GameObject GameOverPanel;
+
 
     void Start()
     {
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Enemy"){
+            GameOverPanel.SetActive(true);
             Time.timeScale = 0;
         }
         if(collision.gameObject.tag == "Coin"){
