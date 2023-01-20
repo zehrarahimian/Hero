@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovementOne : MonoBehaviour
+public class PlayerMovementTwo : MonoBehaviour
 {
     public Transform transform;
     public float speed = 0.5f;
     public float rotationSpeed = 0.5f;
-    public ScoreManager ScoreValue;
+    public ScoreManagerTwo ScoreValue;
 
     public GameObject bulletPrefab;
     public float bulletSpeed = 5;

@@ -76,12 +76,12 @@ public class PlayerMovement : MonoBehaviour
         }
         if(collision.gameObject.tag == "Coin"){
             CoinCounter += 1;
-            ScoreValue.score +=5;
+            ScoreValue.score +=6;
             Destroy(collision.gameObject);
         }
         if(collision.gameObject.tag == "Fuel"){
             FuelCounter += 1;
-            ScoreValue.score +=3;
+            ScoreValue.score +=4;
             Destroy(collision.gameObject);
         }
     }

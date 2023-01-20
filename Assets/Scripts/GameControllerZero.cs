@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class GameControllerZero : MonoBehaviour
 {
     public GameObject GameOverPanel;
     
@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("Game0");
     }
 
     public void GoMenu()

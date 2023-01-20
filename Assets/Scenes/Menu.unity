@@ -667,7 +667,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -681,8 +681,9 @@ MonoBehaviour:
   m_Text: "Hi, Hero\r\nThis game has three levels!\r\nIn the first level, you should
     collect the fuel you need. The goal is to collect at least 20 fuel barrels. \r\nYou'll
     fight enemies on the second level. As soon as their vehicles appear, you should
-    shoot them. You're done if you collide with them :(\r\nTo get the gold prize,
-    you must destroy the enemy's main tent in the last level.\r\nBe aware that each
+    shoot them. You're done if you collide with them :(\r  This level requires richness
+    to score 200.\nTo get the gold prize, you must destroy the enemy's main tent
+    in the last level.\r Once you get 250 scores, it'll appear.\nBe aware that each
     level has a time limit\r\nHope you succeed :)"
 --- !u!222 &593136340
 CanvasRenderer:
@@ -914,7 +915,7 @@ GameObject:
   - component: {fileID: 1413005431}
   - component: {fileID: 1413005432}
   m_Layer: 0
-  m_Name: All
+  m_Name: Des
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
