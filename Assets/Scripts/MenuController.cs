@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
 
     public void GoLevelOne()
     {
-        SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("Game0");
     }
 
     public void GoLevelTwo()
@@ -40,6 +40,6 @@ public class MenuController : MonoBehaviour
 
     public void GoLevelThree()
     {
-        SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("Game2");
     }
 }
