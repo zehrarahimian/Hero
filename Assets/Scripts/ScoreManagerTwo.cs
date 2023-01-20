@@ -19,7 +19,7 @@ public class ScoreManagerTwo : MonoBehaviour
     void Update()
     {
         scoreText.text = ("Score: " + score.ToString());
-        if(score == 300)
+        if(score > 300)
         {
             Time.timeScale = 0;
             WinPanel.SetActive(true);

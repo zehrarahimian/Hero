@@ -682,9 +682,9 @@ MonoBehaviour:
     collect the fuel you need. The goal is to collect at least 20 fuel barrels. \r\nYou'll
     fight enemies on the second level. As soon as their vehicles appear, you should
     shoot them. You're done if you collide with them :(\r  This level requires richness
-    to score 200.\nTo get the gold prize, you must destroy the enemy's main tent
-    in the last level.\r Once you get 250 scores, it'll appear.\nBe aware that each
-    level has a time limit\r\nHope you succeed :)"
+    to score 200.\nTo get the gold prize, you must destroy the enemy's tents in the
+    last level.\r This level requires richness to score 300.\nBe aware that each
+    level has a time limit\r.\nHope you succeed :)"
 --- !u!222 &593136340
 CanvasRenderer:
   m_ObjectHideFlags: 0
