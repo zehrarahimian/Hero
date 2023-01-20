@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(collision.gameObject.tag == "Fuel"){
             FuelCounter += 1;
+            ScoreValue.score +=3;
             Destroy(collision.gameObject);
         }
     }
