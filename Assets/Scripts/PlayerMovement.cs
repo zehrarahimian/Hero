@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject GameOverPanel;
 
+    public int CoinCounter = 0;
+    public int FuelCounter = 0;
+    public Text coinText;
+    public Text fuelText;
+
 
     void Start()
     {
@@ -25,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         Movment();
         Shooting();
         Clamp();
+        coinText.text = ("Coin: " + CoinCounter.ToString());
+        fuelText.text = ("Fuel: " + FuelCounter.ToString());
     }
 
     void Movment()
@@ -67,7 +75,12 @@ public class PlayerMovement : MonoBehaviour
             Time.timeScale = 0;
         }
         if(collision.gameObject.tag == "Coin"){
+            CoinCounter += 1;
             ScoreValue.score +=5;
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.tag == "Fuel"){
+            FuelCounter += 1;
             Destroy(collision.gameObject);
         }
     }
